@@ -1,3 +1,11 @@
+========================================================
+With Node.js installed, Go to the project folder(using command prompt) then Type: "npm install" then Type: "npm start" and Acess the project via: http://localhost:4200
+
+
+
+=========================================================
+
+
 # S2ITT
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
