@@ -1,0 +1,30 @@
+
+.add-transaction{
+	margin-top: 2%;
+}
+
+.show-transaction{
+	margin-top: 5%;
+}
+
+.btn-delete{
+	
+	margin-left: 45%;
+}
+
+.checkbox{
+	margin-left: 2%;
+}
+
+.input-valor{
+	margin-left: 3%;
+}
+
+.btn-add{
+	margin-left: 2%;
+}
+
+.alert{
+	margin-top: 15px;
+	margin-bottom: 0px;
+}

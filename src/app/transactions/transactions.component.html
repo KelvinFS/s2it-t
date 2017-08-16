@@ -1,0 +1,71 @@
+
+<div class="row">
+    <div class="col-md-8">
+      <h1>
+        {{title}}!
+      </h1>
+    </div>
+    <div class="col-md-4">
+      <div class="alert alert-success alert-dismissable" (click)="clickMe()" *ngIf="msgSuccess">
+      <a href="#" class="close" (click)="clickMe()">&times;</a>
+        <strong> Sucesso ! </strong> {{msgSuccess}}
+      </div>
+      <div class="alert alert-danger alert-dismissable" (click)="clickMe()" *ngIf="msgError">
+      <a href="#" class="close" (click)="clickMe()">&times;</a>
+        <strong> Erro ! </strong> {{msgError}}
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+    <hr> 
+
+
+<div class="container add-transaction">
+  <form class="form-inline">
+        <div class="checkbox">
+          <label><input type="checkbox" name="deposit" (click)="unsetWithdrawCheckBox()" [(ngModel)]="depositCheckBox"> Deposito </label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="withdraw" (click)="unsetDepositCheckBox()" [(ngModel)]="withdrawCheckBox"> Saque </label>
+        </div>
+      <div class="form-group input-valor">
+          <label for="value">Valor:</label>
+          <input type="number" class="form-control" id="value" name="value" [(ngModel)]="model.value" >
+      </div>
+      <button type="submit" class="btn btn-default btn-add" (click)="addTransaction()">Adicionar</button>
+  </form>
+</div>
+
+<div class="container show-transaction">
+  <h2>Transações</h2>
+  
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>
+          <a href="#" (click)="sortType('kind')" [class.active]="sortBy === 'kind'">
+            Tipo
+          </a>
+        </th>
+        <th>
+        <a href="#" (click)="sortType('value')" [class.active]="sortBy === 'value'">
+          Valor
+        </a>
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor=" let transaction of transactions; let i=index " >
+        <td>{{transaction.kind}}</td>
+        <td>{{transaction.value}}</td>
+        <td>
+          <div>
+            <a class="btn btn-danger btn-delete" (click)="deleteTransaction(i)">Remover</a>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <h2>TOTAL EM CONTA: R$ {{total}} </h2>
