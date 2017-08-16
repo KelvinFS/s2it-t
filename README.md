@@ -1,9 +1,6 @@
-========================================================
-With Node.js installed, Go to the project folder(using command prompt) then Type: "npm install" then Type: "npm start" and Acess the project via: http://localhost:4200
+# How to run
 
-
-
-=========================================================
+With Node.js installed, Go to the project folder then Type:"npm install" then Type: "npm start" and Acess the project via: http://localhost:4200
 
 
 # S2ITT
